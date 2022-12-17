@@ -1,0 +1,10 @@
+mutation CreateDescription($description: String!, $filename: String!) {
+  createDescription(description: $description, filename: $filename) {
+    id
+    creatorId
+    points
+    description
+    filename
+    voteStatus
+  }
+}

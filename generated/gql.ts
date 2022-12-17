@@ -1,0 +1,44 @@
+/* eslint-disable */
+import * as types from './graphql';
+import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
+
+const documents = {
+    "mutation CreateDescription($description: String!, $filename: String!) {\n  createDescription(description: $description, filename: $filename) {\n    id\n    creatorId\n    points\n    description\n    filename\n    voteStatus\n  }\n}": types.CreateDescriptionDocument,
+    "mutation DeletePost($id: Int!) {\n  deletePost(id: $id)\n}": types.DeletePostDocument,
+    "mutation ForgotPassword($email: String!) {\n  forgotPassword(email: $email)\n}": types.ForgotPasswordDocument,
+    "mutation Login($password: String!, $usernameOrEmail: String!) {\n  login(password: $password, usernameOrEmail: $usernameOrEmail) {\n    errors {\n      field\n      message\n    }\n    persons {\n      id\n      username\n      email\n      avatarUrl\n    }\n  }\n}": types.LoginDocument,
+    "mutation Logout {\n  logout\n}": types.LogoutDocument,
+    "mutation Register($password: String!, $options: UsernameOrEmail!) {\n  register(options: $options, password: $password) {\n    errors {\n      field\n      message\n    }\n    persons {\n      id\n      username\n      email\n      avatarUrl\n    }\n  }\n}": types.RegisterDocument,
+    "mutation ChangePAssword($newPassword: String!, $token: String!) {\n  changePAssword(newPassword: $newPassword, token: $token) {\n    errors {\n      field\n      message\n    }\n    persons {\n      id\n      username\n      email\n      avatarUrl\n    }\n  }\n}": types.ChangePAsswordDocument,
+    "mutation UpdatePost($description: String, $filename: String, $id: Int!) {\n  updatePost(description: $description, filename: $filename, id: $id) {\n    id\n    description\n    filename\n  }\n}": types.UpdatePostDocument,
+    "mutation UpdateProfile($email: String!, $username: String!) {\n  updateProfile(email: $email, username: $username) {\n    id\n    username\n    email\n  }\n}": types.UpdateProfileDocument,
+    "mutation UpdateAvatar($avatarUrl: String!) {\n  updateAvatar(avatarUrl: $avatarUrl) {\n    id\n    avatarUrl\n  }\n}": types.UpdateAvatarDocument,
+    "mutation Vote($postId: Int!, $value: Int!) {\n  vote(postId: $postId, value: $value)\n}": types.VoteDocument,
+    "query Hello {\n  hello {\n    posts {\n      id\n      creatorId\n      creator {\n        id\n        email\n        username\n      }\n      points\n      description\n      filename\n      voteStatus\n    }\n  }\n}": types.HelloDocument,
+    "query Me {\n  me {\n    id\n    email\n    avatarUrl\n    username\n  }\n}": types.MeDocument,
+    "query MyPost {\n  mypost {\n    id\n    posts {\n      id\n      filename\n      description\n    }\n  }\n}": types.MyPostDocument,
+    "query SinglePost($id: Int!) {\n  singlePost(id: $id) {\n    id\n    creatorId\n    creator {\n      id\n      username\n    }\n    filename\n    points\n    description\n    voteStatus\n  }\n}": types.SinglePostDocument,
+};
+
+export function graphql(source: "mutation CreateDescription($description: String!, $filename: String!) {\n  createDescription(description: $description, filename: $filename) {\n    id\n    creatorId\n    points\n    description\n    filename\n    voteStatus\n  }\n}"): (typeof documents)["mutation CreateDescription($description: String!, $filename: String!) {\n  createDescription(description: $description, filename: $filename) {\n    id\n    creatorId\n    points\n    description\n    filename\n    voteStatus\n  }\n}"];
+export function graphql(source: "mutation DeletePost($id: Int!) {\n  deletePost(id: $id)\n}"): (typeof documents)["mutation DeletePost($id: Int!) {\n  deletePost(id: $id)\n}"];
+export function graphql(source: "mutation ForgotPassword($email: String!) {\n  forgotPassword(email: $email)\n}"): (typeof documents)["mutation ForgotPassword($email: String!) {\n  forgotPassword(email: $email)\n}"];
+export function graphql(source: "mutation Login($password: String!, $usernameOrEmail: String!) {\n  login(password: $password, usernameOrEmail: $usernameOrEmail) {\n    errors {\n      field\n      message\n    }\n    persons {\n      id\n      username\n      email\n      avatarUrl\n    }\n  }\n}"): (typeof documents)["mutation Login($password: String!, $usernameOrEmail: String!) {\n  login(password: $password, usernameOrEmail: $usernameOrEmail) {\n    errors {\n      field\n      message\n    }\n    persons {\n      id\n      username\n      email\n      avatarUrl\n    }\n  }\n}"];
+export function graphql(source: "mutation Logout {\n  logout\n}"): (typeof documents)["mutation Logout {\n  logout\n}"];
+export function graphql(source: "mutation Register($password: String!, $options: UsernameOrEmail!) {\n  register(options: $options, password: $password) {\n    errors {\n      field\n      message\n    }\n    persons {\n      id\n      username\n      email\n      avatarUrl\n    }\n  }\n}"): (typeof documents)["mutation Register($password: String!, $options: UsernameOrEmail!) {\n  register(options: $options, password: $password) {\n    errors {\n      field\n      message\n    }\n    persons {\n      id\n      username\n      email\n      avatarUrl\n    }\n  }\n}"];
+export function graphql(source: "mutation ChangePAssword($newPassword: String!, $token: String!) {\n  changePAssword(newPassword: $newPassword, token: $token) {\n    errors {\n      field\n      message\n    }\n    persons {\n      id\n      username\n      email\n      avatarUrl\n    }\n  }\n}"): (typeof documents)["mutation ChangePAssword($newPassword: String!, $token: String!) {\n  changePAssword(newPassword: $newPassword, token: $token) {\n    errors {\n      field\n      message\n    }\n    persons {\n      id\n      username\n      email\n      avatarUrl\n    }\n  }\n}"];
+export function graphql(source: "mutation UpdatePost($description: String, $filename: String, $id: Int!) {\n  updatePost(description: $description, filename: $filename, id: $id) {\n    id\n    description\n    filename\n  }\n}"): (typeof documents)["mutation UpdatePost($description: String, $filename: String, $id: Int!) {\n  updatePost(description: $description, filename: $filename, id: $id) {\n    id\n    description\n    filename\n  }\n}"];
+export function graphql(source: "mutation UpdateProfile($email: String!, $username: String!) {\n  updateProfile(email: $email, username: $username) {\n    id\n    username\n    email\n  }\n}"): (typeof documents)["mutation UpdateProfile($email: String!, $username: String!) {\n  updateProfile(email: $email, username: $username) {\n    id\n    username\n    email\n  }\n}"];
+export function graphql(source: "mutation UpdateAvatar($avatarUrl: String!) {\n  updateAvatar(avatarUrl: $avatarUrl) {\n    id\n    avatarUrl\n  }\n}"): (typeof documents)["mutation UpdateAvatar($avatarUrl: String!) {\n  updateAvatar(avatarUrl: $avatarUrl) {\n    id\n    avatarUrl\n  }\n}"];
+export function graphql(source: "mutation Vote($postId: Int!, $value: Int!) {\n  vote(postId: $postId, value: $value)\n}"): (typeof documents)["mutation Vote($postId: Int!, $value: Int!) {\n  vote(postId: $postId, value: $value)\n}"];
+export function graphql(source: "query Hello {\n  hello {\n    posts {\n      id\n      creatorId\n      creator {\n        id\n        email\n        username\n      }\n      points\n      description\n      filename\n      voteStatus\n    }\n  }\n}"): (typeof documents)["query Hello {\n  hello {\n    posts {\n      id\n      creatorId\n      creator {\n        id\n        email\n        username\n      }\n      points\n      description\n      filename\n      voteStatus\n    }\n  }\n}"];
+export function graphql(source: "query Me {\n  me {\n    id\n    email\n    avatarUrl\n    username\n  }\n}"): (typeof documents)["query Me {\n  me {\n    id\n    email\n    avatarUrl\n    username\n  }\n}"];
+export function graphql(source: "query MyPost {\n  mypost {\n    id\n    posts {\n      id\n      filename\n      description\n    }\n  }\n}"): (typeof documents)["query MyPost {\n  mypost {\n    id\n    posts {\n      id\n      filename\n      description\n    }\n  }\n}"];
+export function graphql(source: "query SinglePost($id: Int!) {\n  singlePost(id: $id) {\n    id\n    creatorId\n    creator {\n      id\n      username\n    }\n    filename\n    points\n    description\n    voteStatus\n  }\n}"): (typeof documents)["query SinglePost($id: Int!) {\n  singlePost(id: $id) {\n    id\n    creatorId\n    creator {\n      id\n      username\n    }\n    filename\n    points\n    description\n    voteStatus\n  }\n}"];
+
+export function graphql(source: string): unknown;
+export function graphql(source: string) {
+  return (documents as any)[source] ?? {};
+}
+
+export type DocumentType<TDocumentNode extends DocumentNode<any, any>> = TDocumentNode extends DocumentNode<  infer TType,  any>  ? TType  : never;

@@ -1,0 +1,14 @@
+query SinglePost($id:Int!){
+  singlePost(id:$id){
+    id
+    creatorId
+    creator{
+      id
+      username
+    }
+    filename
+    points
+    description
+    voteStatus
+  }
+}

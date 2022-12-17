@@ -1,0 +1,17 @@
+query Hello{
+  hello{
+    posts{
+       id
+      creatorId
+      creator{
+        id
+        email
+        username
+      }
+      points
+      description
+      filename
+      voteStatus
+    }
+  }
+}

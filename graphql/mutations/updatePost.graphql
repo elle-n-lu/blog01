@@ -1,0 +1,7 @@
+mutation UpdatePost($description: String, $filename: String, $id: Int!) {
+  updatePost(description: $description, filename: $filename, id: $id) {
+    id
+    description
+    filename
+  }
+}

@@ -1,0 +1,10 @@
+query MyPost{
+  mypost{
+    id
+    posts{
+      id
+      filename
+      description
+    }
+  }
+}
