@@ -8,7 +8,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## § Check the demo
 
 
-Click [demo link](https://ellenlu.com)
+Click [demo link](https://ellenllu.com)
 
 ## § Features
 
